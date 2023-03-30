@@ -1,16 +1,18 @@
 <div class="row">
   <div class="col-xs-10">
-    <app-shopping-edit></app-shopping-edit>
+    <app-shopping-edit
+      (ingredientAdded)="onAddIngredient($event)"
+    ></app-shopping-edit>
     <hr />
     <div>
       <ul class="list-group">
         <a
           herf="#"
           class="list-group-item"
-          *ngFor="let ingredient of ingredients"
+          *ngFor="let ingredient of ingredients | keyvalue"
         >
-          <span class="badge">{{ ingredient.amount }}</span>
-          <strong>{{ ingredient.name }}</strong>
+          <span class="badge">{{ ingredient.value }}</span>
+          <strong>{{ ingredient.key }}</strong>
         </a>
       </ul>
     </div>
