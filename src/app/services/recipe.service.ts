@@ -1,6 +1,6 @@
 import { EventEmitter } from "@angular/core";
 import { ingredient } from "../sheared/ingredient.model";
-import { Recipe } from "../sheared/recipe.model";
+import { Recipe } from '../sheared/recipe.model';
 
 export class RecipeService {
     recipeSelected = new EventEmitter<Recipe>();
